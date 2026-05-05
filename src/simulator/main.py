@@ -1,12 +1,10 @@
-import sys
-import numpy as np
-
 from physics import PhysicsEngine
 from renderer import Renderer
 from world import World
 
-from objects import RobotTree, TwoLink, Tree7, CartPole
+from objects import CartPole
 from dynamics.ab_algorithm import ABAlgorithm
+
 
 def main():
 
@@ -25,12 +23,10 @@ def main():
 
     robot = CartPole()
 
-
     world.add_object(robot)
 
     world.run(1000)
 
 
-
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
